@@ -1,0 +1,28 @@
+package main;
+
+import java.io.File;
+import java.util.Scanner;
+
+public class StartUp {
+
+	public static void main(String[] args) {
+		
+		File cavFile1 = new File("input1.cav");		
+		//FileReader fileReader = new FileReader();
+		
+		try {			
+			Scanner sc = new Scanner(cavFile1);
+			String line = sc.nextLine();
+			//String [] parts = line.split(",");
+			
+			while(sc.hasNext()) {
+				System.out.println(sc.nextLine());
+			}
+		}
+		catch(Exception ex)	{
+			throw new RuntimeException(ex.getMessage());
+		}	
+		
+		//fileReader.reader(cavFile1);
+	}
+}

@@ -1,0 +1,64 @@
+package main;
+
+import java.io.File;
+import java.util.Scanner;
+
+public class FileReader {
+	
+	//static String[] parts;
+	int[] values; //array of all numbers in file
+	int noc; // number of coordinates
+	int[][] matrix; // 2d array to hold matrix 1 and 0
+	int[] coordinates; // array to hold just coordinates
+	int[] x; // array for coordinates on x
+	int [] y; // array for coordinates on y
+	
+	public FileReader() {
+		//parts = new String[0];
+		values = new int[0];
+		noc = 0;
+		matrix = new int[noc][noc];
+		coordinates = new int[0]; // array to hold just coordinates
+		x = new int[0];
+		y = new int[0];		
+		
+	}
+	
+	public void reader(File file){
+		try {			
+			Scanner sc = new Scanner(file);
+			String line = sc.nextLine();
+			String [] parts = line.split(",");
+			
+			while(sc.hasNext()) {
+				System.out.println(sc.nextLine());
+			}
+		}
+		catch(Exception ex)	{
+			throw new RuntimeException(ex.getMessage());
+		}		
+		
+		//Convert();
+		//SplitArray();
+	}
+	
+//	public void Convert() {
+//		// convert from string to int array
+//		for(int i = 0; i <= parts.length; i++) {
+//			values = new int[parts.length];
+//			values[i] = Integer.parseInt(parts[i]);
+//		}
+//	}
+//	
+//	public void SplitArray() {
+//		
+//		noc = values[0];
+//		coordinates = new int [noc*2];
+//		
+//		for(int i = 1; i < noc*2-1; i++) {
+//			coordinates[i-1] = values[i];
+//			
+//			System.out.println(coordinates[i-1]);
+//		}		
+//	}
+}
